@@ -1,9 +1,12 @@
 #include<stdio.h>
 int main()
-    {
-        int r;
-        scanf("%d",&r);
-        float a=3.14*r*r;
-        printf("%0.2f",a);
-        return 0;
-    }
+{
+    int r;
+    float area;
+    float pie=3.14;
+   scanf("%d",&r);
+   area=pie*r*r;
+   printf("%.2f",area);
+   return 0;
+    
+}
