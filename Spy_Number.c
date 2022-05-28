@@ -1,8 +1,7 @@
-
- #include<stdio.h>
+#include<stdio.h>
 int main()
 {
-    int n,sum=0,r,p=1;
+    int n,r,sum=0,p=1;
     scanf("%d",&n);
     while(n>0)
     {
@@ -19,6 +18,4 @@ int main()
     {
         printf("Not Spy Number");
     }
-    return 0;
 }
-
