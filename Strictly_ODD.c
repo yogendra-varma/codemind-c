@@ -1,45 +1,25 @@
 #include<stdio.h>
-int strictly_odd(int*a,int n)
-{
-    int i,o=0,oi=0;
-    for(i=0;i<n;i++)
-    {
-        if(a[i]%2!=0)
-        {
-            o++;
-        }
-    }
-    for(i=0;i<n;i++)
-    {
-        if(a[i]%2!=0 && i%2!=0)
-        {
-            oi++;
-        }
-    }
-    if(o==oi)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
 int main()
 {
-    int a[100],x,n,i;
+    int ar[100],i,n,f=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&ar[i]);
     }
-    x=strictly_odd(a,n);
-    if(x==1)
+    for(i=0;i<n;i++)
     {
-        printf("True");
+        if(i%2==0)
+        {
+            if(ar[i]%2!=0)
+            {
+                f=1;
+                break;
+            }
+        }
     }
-    if(x==0)
-    {
-        printf("False");
-    }
+    if(f==0)
+    printf("True");
+    else
+    printf("False");
 }
