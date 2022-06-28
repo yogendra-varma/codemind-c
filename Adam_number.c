@@ -1,30 +1,26 @@
 #include<stdio.h>
 int main()
 {
-   int n,r,x=0,a,b,c=0,y;
-   scanf("%d",&n);
-   y=n*n;
-   while(n>0)
-   {
-       r=n%10;
-       x=x*10+r;
-       n=n/10;
-       
-   }
-   a=x*x;
-   while(a>0)
-   {
-       b=a%10;
-       c=c*10+b;
-       a=a/10;
-       
-   }
-   if(y==c)
-   {
-       printf("True");
-   }
-   else
-   {
-       printf("False");
-   }
+    int n,r=0,s,sq,t=0;
+    scanf("%d",&n);
+    s=n*n;
+    while(n>0)
+    {
+        r=r*10+n%10;
+        n/=10;
+    }
+    sq=r*r;
+    while(sq>0)
+    {
+        t=t*10+sq%10;
+        sq/=10;
+    }
+    if(s==t)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
 }
