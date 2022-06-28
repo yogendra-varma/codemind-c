@@ -1,12 +1,13 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,v,k;
+    int n,a,b,sum=0;
     scanf("%d",&n);
-    for(i=1;i<=n;i++)
-    {
-        scanf("%d%d",&v,&k);
+    for(int i=0;i<n;i++)
+    { sum=0;
+        scanf("%d%d",&a,&b);
+        sum=a+b;
         printf("%d
-",v+k);
-    };
-};
+",sum);
+    }
+}
