@@ -1,46 +1,51 @@
 #include<stdio.h>
-#include<math.h>
-int isprime(int num)
-{
-    int i,fc=0;
-    for(i=1;i<=num;i++)
-    {
-        if(num%i==0)
-        {
-            fc++;
-        }
-    }
-    if(fc==2)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
 int main()
 {
-    int num,pp,np,avg,res,r1,r2;
-    float sq;
-    scanf("%d",&num);
-    if(isprime(num))
+    int a,b,f=0,n,i,j,fwd,bwd;
+    scanf("%d",&n);
+    a=n;b=n;
+    while(1)
     {
-        printf("0");
+        f=0;
+        for(i=1;i<=a;i++)
+        {
+            if(a%i==0)
+            {
+                f++;
+            }
+        }
+        if(f==2)
+        {
+            fwd=a-n;
+            break;
+        }
+        a++;
     }
-    else
+    while(1)
     {
-        for(pp=num-1;!isprime(pp);pp--);
-        for(np=num+1;!isprime(np);np++);
-        r1=np-num;
-        r2=num-pp;
-        if(r1>r2)
+        f=0;
+        for(i=1;i<=b;i++)
         {
-            printf("%d",r2);
+            if(b%i==0)
+            {
+                f++;
+            }
         }
-        else
+        if(f==2)
         {
-            printf("%d",r1);
+            bwd=n-b;
+            break;
         }
+        b--;
     }
+    if(fwd==0 && bwd==0)
+    {
+        printf("%d",fwd);
+    }else if(fwd<bwd)
+    {
+        printf("%d",fwd);
+    }else{
+        printf("%d",bwd);
+    }
+    return 0;
 }
