@@ -49,4 +49,4 @@ int main()
         printf("%d",next);
     }
     return 0;
-} 
+}
