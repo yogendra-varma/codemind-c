@@ -1,14 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    int n,sum=0,sq,r;
+    int n,sq,r,sum=0;
     scanf("%d",&n);
     sq=n*n;
-    while(sq>0)
+    while(sq!=0)
     {
-      r=sq%10;
-      sum=sum+r;
-      sq=sq/10;
+       r=sq%10;
+       sum=sum+r;
+       sq=sq/10;
     }
     if(sum==n)
     {
@@ -18,4 +18,6 @@ int main()
     {
         printf("Not Neon Number");
     }
+    
+    
 }
